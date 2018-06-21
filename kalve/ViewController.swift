@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
+    let colorPallette : ColorPanel = ColorPanel()
+    
+    var activeRect : UIView = UIView()
     
     
 
@@ -85,24 +88,59 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         
         rectView.transform = rectView.transform.rotated(by: CGFloat(sender.rotation))
     }
+    
+    func addTapGesture(view: UIView){
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.handleTap(sender:)))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func handleTap(sender: UITapGestureRecognizer){
+        
+        
+        let rectView = sender.view!
+        
+        if(rectView.layer.shadowOpacity == 0.0){
+            rectView.layer.shadowColor = UIColor(red: 255.0/255.0, green: 25.0/255.0, blue: 125.0/255.0, alpha: 0.8).cgColor
+            
+            
+            
+            rectView.layer.shadowOpacity = 0.75
+            
+            rectView.layer.shadowRadius = 25.50
+            
+            self.activeRect = rectView
+            
+            return self.view.addSubview(colorPallette)
+            
+            
+        } else {
+            rectView.layer.shadowOpacity = 0.0
+            rectView.layer.shadowRadius = 0.0
+            
+            self.activeRect = UIView()
+            
+           return colorPallette.removeFromSuperview()
+        }
+        
+        
+        
+       
+        
+    }
   
     
     // MARK : BACKGROUND COLORS
     
     @IBAction func changeRed(_ sender: Any) {
         
-        
-        
-        
-        
-        self.view.backgroundColor = .red
+        activeRect.layer.backgroundColor = UIColor(red: 255.0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0).cgColor
         
     }
     @IBAction func changeColorPressed(_ sender: Any) {
         
  
         
-        self.view.backgroundColor = .blue
+        activeRect.layer.backgroundColor = UIColor(red: 0/255.0, green: 0/255.0, blue: 255.0/255.0, alpha: 1.0).cgColor
         
     }
  
@@ -118,11 +156,19 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
             origin: CGPoint(x: 50, y: 50),
             size: CGSize(width: 100, height: 100)))
         
+        k.layer.backgroundColor =  UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0).cgColor
+        
+        
+        
+        
         self.view.addSubview(k)
         
         self.addPanGesture(view: k)
         self.addPinchGesture(view: k)
         self.addRotateGesture(view: k)
+        self.addTapGesture(view: k)
+        
+        
     }
     
 }
@@ -137,23 +183,7 @@ class Draw: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func draw(_ rect: CGRect) {
-        let h = rect.height
-        let w = rect.width
-        var color:UIColor = UIColor.yellow
-        
-        var drect = CGRect(x: (w * 0.25),y: (h * 0.25),width: (w * 0.5),height: (h * 0.5))
-        var bpath:UIBezierPath = UIBezierPath(rect: drect)
-        
-        color.set()
-        bpath.stroke()
-        
-        print("it ran")
-        
-        NSLog("drawRect has updated the view")
-        
-    }
-    
 }
+
 
 
