@@ -42,6 +42,14 @@
                                     <action selector="createNewRectangle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fGV-XX-Rnv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afo-KA-AwB">
+                                <rect key="frame" x="304" y="626" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Circle"/>
+                                <connections>
+                                    <action selector="createNewCircle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NbX-JT-6kQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>

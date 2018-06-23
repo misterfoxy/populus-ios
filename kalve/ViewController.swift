@@ -171,6 +171,27 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         
     }
     
+    @IBAction func createNewCircle(_ sender: Any) {
+        
+        let c = Draw(frame: CGRect(
+            origin: CGPoint(x: 100, y: 100),
+            size: CGSize(width: 100, height: 100)))
+        
+        c.layer.backgroundColor = UIColor.black.cgColor
+        
+        c.layer.cornerRadius = 50
+        
+    
+        
+        self.view.addSubview(c)
+        
+        self.addPanGesture(view: c)
+        self.addPinchGesture(view: c)
+        self.addRotateGesture(view: c)
+        self.addTapGesture(view: c)
+        
+        
+    }
 }
 
 class Draw: UIView {
@@ -184,6 +205,8 @@ class Draw: UIView {
     }
     
 }
+
+
 
 
 
