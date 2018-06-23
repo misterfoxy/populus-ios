@@ -10,12 +10,15 @@ import UIKit
 
 class ColorPanel: UIView {
     
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.layer.backgroundColor = UIColor(red: 225.0/255.0, green: 225.0/255.0, blue: 225.0/255.0, alpha: 1.0).cgColor
+        self.layer.backgroundColor = UIColor(red: 215.0/255.0, green: 225.0/255.0, blue: 225.0/255.0, alpha: 1.0).cgColor
+
+        self.layer.frame = CGRect(x: 0, y: 0, width: 250.0, height: 100.0)
         
-        self.layer.frame = CGRect(x: 0, y: 0, width: 100.0, height: 100.0)
+        
         
     }
     
