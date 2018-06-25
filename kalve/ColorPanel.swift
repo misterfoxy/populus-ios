@@ -23,7 +23,8 @@ class ColorPanel: UIView {
         
         instantiateRedButton()
         instantiateBlueButton()
-        
+        instantiateYellowButton()
+        instantiateGreenButton()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -61,6 +62,33 @@ class ColorPanel: UIView {
          activeRect.layer.backgroundColor = UIColor(red: 5.0/255.0, green: 10.0/255.0, blue: 245.0/255.0, alpha: 1.0).cgColor
     }
     
+    func instantiateYellowButton(){
+        let yellowButton = UIButton(frame: CGRect(x: 140, y: 20, width: 30, height: 30))
+        yellowButton.backgroundColor = .yellow
+        
+        yellowButton.setTitle("Yl", for: .normal)
+        yellowButton.addTarget(self, action: #selector(self.yellowButtonPressed), for: .touchUpInside)
+        
+        self.addSubview(yellowButton)
+    }
+    
+    @objc func yellowButtonPressed(){
+        activeRect.layer.backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 0/255.0, alpha: 1.0).cgColor
+    }
+    
+    func instantiateGreenButton(){
+        let greenButton = UIButton(frame: CGRect(x: 200, y: 20, width: 30, height: 30))
+        greenButton.backgroundColor = .green
+        
+        greenButton.setTitle("Blue", for: .normal)
+        greenButton.addTarget(self, action: #selector(self.greenButtonPressed), for: .touchUpInside)
+        
+        self.addSubview(greenButton)
+    }
+    
+    @objc func greenButtonPressed(){
+         activeRect.layer.backgroundColor = UIColor(red: 0/255.0, green: 255.0/255.0, blue: 0/255.0, alpha: 1.0).cgColor
+    }
     
     
 
