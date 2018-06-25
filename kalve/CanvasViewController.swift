@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIGestureRecognizerDelegate {
+class CanvasViewController: UIViewController, UIGestureRecognizerDelegate {
     
     let colorPallette : ColorPanel = ColorPanel()
     
@@ -32,7 +32,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     // MARK: GESTURE RECOGNIZERS
 
     func addPanGesture(view: UIView){
-        let pan = UIPanGestureRecognizer(target: self, action: #selector (ViewController.handlePan(sender:)))
+        let pan = UIPanGestureRecognizer(target: self, action: #selector (CanvasViewController.handlePan(sender:)))
         
         view.addGestureRecognizer(pan)
         
@@ -61,7 +61,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     
     func addPinchGesture(view: UIView){
-        let pinch = UIPinchGestureRecognizer(target: self, action: #selector(ViewController.handlePinch(sender:)))
+        let pinch = UIPinchGestureRecognizer(target: self, action: #selector(CanvasViewController.handlePinch(sender:)))
         
         view.addGestureRecognizer(pinch)
     }
@@ -77,7 +77,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     
     func addRotateGesture(view: UIView){
-        let rotate = UIRotationGestureRecognizer(target: self, action: #selector(ViewController.handleRotate(sender:)))
+        let rotate = UIRotationGestureRecognizer(target: self, action: #selector(CanvasViewController.handleRotate(sender:)))
         
         view.addGestureRecognizer(rotate)
         
@@ -90,7 +90,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func addTapGesture(view: UIView){
-        let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.handleTap(sender:)))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(CanvasViewController.handleTap(sender:)))
         view.addGestureRecognizer(tap)
     }
     
@@ -109,6 +109,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
             rectView.layer.shadowRadius = 25.50
             
             self.activeRect = rectView
+            colorPallette.activeRect = rectView
             
             return self.view.addSubview(colorPallette)
             

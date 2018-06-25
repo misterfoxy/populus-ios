@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		88E6BC3520D782B200A8AE39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E6BC3420D782B200A8AE39 /* AppDelegate.swift */; };
-		88E6BC3720D782B200A8AE39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E6BC3620D782B200A8AE39 /* ViewController.swift */; };
+		88E6BC3720D782B200A8AE39 /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E6BC3620D782B200A8AE39 /* CanvasViewController.swift */; };
 		88E6BC3A20D782B300A8AE39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88E6BC3820D782B300A8AE39 /* Main.storyboard */; };
 		88E6BC3D20D782B300A8AE39 /* kalve.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88E6BC3B20D782B300A8AE39 /* kalve.xcdatamodeld */; };
 		88E6BC3F20D782B600A8AE39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88E6BC3E20D782B600A8AE39 /* Assets.xcassets */; };
@@ -19,7 +19,7 @@
 /* Begin PBXFileReference section */
 		88E6BC3120D782B200A8AE39 /* kalve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kalve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E6BC3420D782B200A8AE39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		88E6BC3620D782B200A8AE39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		88E6BC3620D782B200A8AE39 /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
 		88E6BC3920D782B300A8AE39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88E6BC3C20D782B300A8AE39 /* kalve.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = kalve.xcdatamodel; sourceTree = "<group>"; };
 		88E6BC3E20D782B600A8AE39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				88E6BC3420D782B200A8AE39 /* AppDelegate.swift */,
-				88E6BC3620D782B200A8AE39 /* ViewController.swift */,
+				88E6BC3620D782B200A8AE39 /* CanvasViewController.swift */,
 				88E6BC3820D782B300A8AE39 /* Main.storyboard */,
 				88E6BC3E20D782B600A8AE39 /* Assets.xcassets */,
 				88E6BC4020D782B600A8AE39 /* LaunchScreen.storyboard */,
@@ -142,7 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88E6BC3D20D782B300A8AE39 /* kalve.xcdatamodeld in Sources */,
-				88E6BC3720D782B200A8AE39 /* ViewController.swift in Sources */,
+				88E6BC3720D782B200A8AE39 /* CanvasViewController.swift in Sources */,
 				88E6BC4A20DB728C00A8AE39 /* ColorPanel.swift in Sources */,
 				88E6BC3520D782B200A8AE39 /* AppDelegate.swift in Sources */,
 			);
