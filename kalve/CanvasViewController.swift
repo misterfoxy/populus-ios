@@ -22,6 +22,7 @@ class CanvasViewController: UIViewController, UIGestureRecognizerDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         self.instantiateCircleButton()
         self.instantiateRectangleButton()
+        self.createSaveAndQuitButton()
         
         self.view.backgroundColor = .white
         
@@ -130,24 +131,7 @@ class CanvasViewController: UIViewController, UIGestureRecognizerDelegate {
   
     
     // MARK: NEW SHAPES
-//
-//    @IBAction func createNewRectangle(_ sender: Any) {
-//
-//        let k = Draw(frame: CGRect(
-//            origin: CGPoint(x: 50, y: 50),
-//            size: CGSize(width: 100, height: 100)))
-//
-//        k.layer.backgroundColor =  UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0).cgColor
-//
-//        self.view.addSubview(k)
-//
-//        self.addPanGesture(view: k)
-//        self.addPinchGesture(view: k)
-//        self.addRotateGesture(view: k)
-//        self.addTapGesture(view: k)
-//
-//
-//    }
+
     
     func instantiateRectangleButton(){
         let greenButton = UIButton(frame: CGRect(x: 20, y: 150, width: 30, height: 30))
@@ -204,42 +188,30 @@ class CanvasViewController: UIViewController, UIGestureRecognizerDelegate {
         self.addTapGesture(view: c)
     }
     
-//    @IBAction func createNewCircle(_ sender: Any) {
-//
-//        let c = Draw(frame: CGRect(
-//            origin: CGPoint(x: 100, y: 100),
-//            size: CGSize(width: 100, height: 100)))
-//
-//        c.layer.backgroundColor = UIColor.black.cgColor
-//
-//        c.layer.cornerRadius = 50
-//
-//
-//
-//        self.view.addSubview(c)
-//
-//        self.addPanGesture(view: c)
-//        self.addPinchGesture(view: c)
-//        self.addRotateGesture(view: c)
-//        self.addTapGesture(view: c)
-//
-//    }
+    // MARK : Navigation
     
-    
-    @IBAction func createNewTriangle(_ sender: Any) {
-        let c = TriangleView(frame: CGRect(x: 50.0, y: 50.0, width: 100.0, height: 100.0))
+    func createSaveAndQuitButton(){
+        let saveButton = UIButton(frame: CGRect(x: 50, y: 300, width: 200, height: 50))
         
-        c.layer.backgroundColor = UIColor.clear.cgColor
+        saveButton.setTitle("Save and Quit", for: .normal)
         
+        saveButton.setTitleColor(UIColor.darkText, for: .normal)
         
-        self.view.addSubview(c)
+        saveButton.backgroundColor = .cyan
         
-        self.addPanGesture(view: c)
-        self.addPinchGesture(view: c)
-        self.addRotateGesture(view: c)
-        self.addTapGesture(view: c)
+        saveButton.addTarget(self, action: #selector(self.executeSaveAndQuit), for: .touchUpInside)
+        
+        self.view.addSubview(saveButton)
+        
         
     }
+    
+    @objc func executeSaveAndQuit(){
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+    }
+    
+
 }
 
 class Draw: UIView {
