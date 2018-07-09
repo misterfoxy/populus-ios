@@ -31,6 +31,8 @@ class ColorPanel: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: ----> COLOR BUTTON FUNCTIONS
+    
     func instantiateRedButton(){
         let redButton = UIButton(frame: CGRect(x: 20, y: 20, width: 30, height: 30))
         redButton.backgroundColor = .red
@@ -89,6 +91,8 @@ class ColorPanel: UIView {
     @objc func greenButtonPressed(){
          activeRect.layer.backgroundColor = UIColor(red: 0/255.0, green: 255.0/255.0, blue: 0/255.0, alpha: 1.0).cgColor
     }
+    
+    
     
     
 

@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		807856DC04F2B0E08927E827 /* Pods_kalve.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD9C550ED9C886EA578EBAD /* Pods_kalve.framework */; };
+		881B23CC20E7769800913B8C /* AssetPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881B23CB20E7769800913B8C /* AssetPanel.swift */; };
+		885397EF20F2FC7C00A1A5AD /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885397EE20F2FC7C00A1A5AD /* DashboardViewController.swift */; };
 		88E6BC3520D782B200A8AE39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E6BC3420D782B200A8AE39 /* AppDelegate.swift */; };
 		88E6BC3720D782B200A8AE39 /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E6BC3620D782B200A8AE39 /* CanvasViewController.swift */; };
-		88E6BC3A20D782B300A8AE39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88E6BC3820D782B300A8AE39 /* Main.storyboard */; };
 		88E6BC3D20D782B300A8AE39 /* kalve.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88E6BC3B20D782B300A8AE39 /* kalve.xcdatamodeld */; };
 		88E6BC3F20D782B600A8AE39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88E6BC3E20D782B600A8AE39 /* Assets.xcassets */; };
 		88E6BC4220D782B600A8AE39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88E6BC4020D782B600A8AE39 /* LaunchScreen.storyboard */; };
@@ -17,15 +19,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56255D67D5F632F419FC258C /* Pods-kalve.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kalve.release.xcconfig"; path = "Pods/Target Support Files/Pods-kalve/Pods-kalve.release.xcconfig"; sourceTree = "<group>"; };
+		7FD9C550ED9C886EA578EBAD /* Pods_kalve.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kalve.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		881B23CB20E7769800913B8C /* AssetPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetPanel.swift; sourceTree = "<group>"; };
+		885397EE20F2FC7C00A1A5AD /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		88E6BC3120D782B200A8AE39 /* kalve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kalve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E6BC3420D782B200A8AE39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88E6BC3620D782B200A8AE39 /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
-		88E6BC3920D782B300A8AE39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88E6BC3C20D782B300A8AE39 /* kalve.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = kalve.xcdatamodel; sourceTree = "<group>"; };
 		88E6BC3E20D782B600A8AE39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88E6BC4120D782B600A8AE39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88E6BC4320D782B600A8AE39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88E6BC4920DB728C00A8AE39 /* ColorPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPanel.swift; sourceTree = "<group>"; };
+		D453BA6E5392ACB9EAEC37DA /* Pods-kalve.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kalve.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kalve/Pods-kalve.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				807856DC04F2B0E08927E827 /* Pods_kalve.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17DF104C851E471D10502981 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FD9C550ED9C886EA578EBAD /* Pods_kalve.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		694A55D20411EBB195D6D033 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D453BA6E5392ACB9EAEC37DA /* Pods-kalve.debug.xcconfig */,
+				56255D67D5F632F419FC258C /* Pods-kalve.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		88E6BC2820D782B200A8AE39 = {
 			isa = PBXGroup;
 			children = (
 				88E6BC3320D782B200A8AE39 /* kalve */,
 				88E6BC3220D782B200A8AE39 /* Products */,
+				694A55D20411EBB195D6D033 /* Pods */,
+				17DF104C851E471D10502981 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,8 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				88E6BC3420D782B200A8AE39 /* AppDelegate.swift */,
+				885397EE20F2FC7C00A1A5AD /* DashboardViewController.swift */,
 				88E6BC3620D782B200A8AE39 /* CanvasViewController.swift */,
-				88E6BC3820D782B300A8AE39 /* Main.storyboard */,
+				881B23CB20E7769800913B8C /* AssetPanel.swift */,
 				88E6BC3E20D782B600A8AE39 /* Assets.xcassets */,
 				88E6BC4020D782B600A8AE39 /* LaunchScreen.storyboard */,
 				88E6BC4320D782B600A8AE39 /* Info.plist */,
@@ -77,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88E6BC4620D782B600A8AE39 /* Build configuration list for PBXNativeTarget "kalve" */;
 			buildPhases = (
+				E68B73231ACBAC87E4B06BDD /* [CP] Check Pods Manifest.lock */,
 				88E6BC2D20D782B200A8AE39 /* Sources */,
 				88E6BC2E20D782B200A8AE39 /* Frameworks */,
 				88E6BC2F20D782B200A8AE39 /* Resources */,
+				C1D382BA72AF9E0242917240 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,11 +159,51 @@
 			files = (
 				88E6BC4220D782B600A8AE39 /* LaunchScreen.storyboard in Resources */,
 				88E6BC3F20D782B600A8AE39 /* Assets.xcassets in Resources */,
-				88E6BC3A20D782B300A8AE39 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C1D382BA72AF9E0242917240 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-kalve/Pods-kalve-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kalve/Pods-kalve-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E68B73231ACBAC87E4B06BDD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kalve-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		88E6BC2D20D782B200A8AE39 /* Sources */ = {
@@ -142,8 +211,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				88E6BC3D20D782B300A8AE39 /* kalve.xcdatamodeld in Sources */,
+				885397EF20F2FC7C00A1A5AD /* DashboardViewController.swift in Sources */,
 				88E6BC3720D782B200A8AE39 /* CanvasViewController.swift in Sources */,
 				88E6BC4A20DB728C00A8AE39 /* ColorPanel.swift in Sources */,
+				881B23CC20E7769800913B8C /* AssetPanel.swift in Sources */,
 				88E6BC3520D782B200A8AE39 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,14 +222,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		88E6BC3820D782B300A8AE39 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				88E6BC3920D782B300A8AE39 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		88E6BC4020D782B600A8AE39 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -286,9 +349,11 @@
 		};
 		88E6BC4720D782B600A8AE39 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D453BA6E5392ACB9EAEC37DA /* Pods-kalve.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W5T32R2AP6;
 				INFOPLIST_FILE = kalve/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -303,9 +368,11 @@
 		};
 		88E6BC4820D782B600A8AE39 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56255D67D5F632F419FC258C /* Pods-kalve.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W5T32R2AP6;
 				INFOPLIST_FILE = kalve/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

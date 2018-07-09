@@ -8,19 +8,22 @@
 
 import UIKit
 
+
 class CanvasViewController: UIViewController, UIGestureRecognizerDelegate {
+    
     
     let colorPallette : ColorPanel = ColorPanel()
     
     var activeRect : UIView = UIView()
     
-    
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
+        self.instantiateCircleButton()
+        self.instantiateRectangleButton()
+        
+        self.view.backgroundColor = .white
         
     }
 
@@ -111,6 +114,7 @@ class CanvasViewController: UIViewController, UIGestureRecognizerDelegate {
             self.activeRect = rectView
             colorPallette.activeRect = rectView
             
+            colorPallette.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 100.0)
             return self.view.addSubview(colorPallette)
             
             
@@ -122,45 +126,45 @@ class CanvasViewController: UIViewController, UIGestureRecognizerDelegate {
             
            return colorPallette.removeFromSuperview()
         }
-        
-        
-        
-       
-        
     }
   
     
-    // MARK : BACKGROUND COLORS
-    
-    @IBAction func changeRed(_ sender: Any) {
-        
-        activeRect.layer.backgroundColor = UIColor(red: 255.0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0).cgColor
-        
-    }
-    @IBAction func changeColorPressed(_ sender: Any) {
-        
- 
-        
-        activeRect.layer.backgroundColor = UIColor(red: 0/255.0, green: 0/255.0, blue: 255.0/255.0, alpha: 1.0).cgColor
-        
-    }
- 
-    
     // MARK: NEW SHAPES
+//
+//    @IBAction func createNewRectangle(_ sender: Any) {
+//
+//        let k = Draw(frame: CGRect(
+//            origin: CGPoint(x: 50, y: 50),
+//            size: CGSize(width: 100, height: 100)))
+//
+//        k.layer.backgroundColor =  UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0).cgColor
+//
+//        self.view.addSubview(k)
+//
+//        self.addPanGesture(view: k)
+//        self.addPinchGesture(view: k)
+//        self.addRotateGesture(view: k)
+//        self.addTapGesture(view: k)
+//
+//
+//    }
     
-    @IBAction func createNewRectangle(_ sender: Any) {
+    func instantiateRectangleButton(){
+        let greenButton = UIButton(frame: CGRect(x: 20, y: 150, width: 30, height: 30))
+        greenButton.backgroundColor = .blue
         
-     
+        greenButton.setTitle("Box", for: .normal)
+        greenButton.addTarget(self, action: #selector(self.newRectTapped), for: .touchUpInside)
         
-        
+        self.view.addSubview(greenButton)
+    }
+    
+    @objc func newRectTapped(){
         let k = Draw(frame: CGRect(
             origin: CGPoint(x: 50, y: 50),
             size: CGSize(width: 100, height: 100)))
         
         k.layer.backgroundColor =  UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0).cgColor
-        
-        
-        
         
         self.view.addSubview(k)
         
@@ -168,12 +172,20 @@ class CanvasViewController: UIViewController, UIGestureRecognizerDelegate {
         self.addPinchGesture(view: k)
         self.addRotateGesture(view: k)
         self.addTapGesture(view: k)
+    }
+    
+    func instantiateCircleButton(){
+        let greenButton = UIButton(frame: CGRect(x: 20, y: 100, width: 30, height: 30))
+        greenButton.backgroundColor = .blue
         
+        greenButton.setTitle("Circle", for: .normal)
+        greenButton.addTarget(self, action: #selector(self.newCircleTapped), for: .touchUpInside)
+        
+        self.view.addSubview(greenButton)
         
     }
     
-    @IBAction func createNewCircle(_ sender: Any) {
-        
+    @objc func newCircleTapped(){
         let c = Draw(frame: CGRect(
             origin: CGPoint(x: 100, y: 100),
             size: CGSize(width: 100, height: 100)))
@@ -182,7 +194,7 @@ class CanvasViewController: UIViewController, UIGestureRecognizerDelegate {
         
         c.layer.cornerRadius = 50
         
-    
+        
         
         self.view.addSubview(c)
         
@@ -190,15 +202,34 @@ class CanvasViewController: UIViewController, UIGestureRecognizerDelegate {
         self.addPinchGesture(view: c)
         self.addRotateGesture(view: c)
         self.addTapGesture(view: c)
-        
-        
     }
+    
+//    @IBAction func createNewCircle(_ sender: Any) {
+//
+//        let c = Draw(frame: CGRect(
+//            origin: CGPoint(x: 100, y: 100),
+//            size: CGSize(width: 100, height: 100)))
+//
+//        c.layer.backgroundColor = UIColor.black.cgColor
+//
+//        c.layer.cornerRadius = 50
+//
+//
+//
+//        self.view.addSubview(c)
+//
+//        self.addPanGesture(view: c)
+//        self.addPinchGesture(view: c)
+//        self.addRotateGesture(view: c)
+//        self.addTapGesture(view: c)
+//
+//    }
+    
+    
     @IBAction func createNewTriangle(_ sender: Any) {
         let c = TriangleView(frame: CGRect(x: 50.0, y: 50.0, width: 100.0, height: 100.0))
         
-        c.layer.backgroundColor = UIColor.black.cgColor
-        
-        
+        c.layer.backgroundColor = UIColor.clear.cgColor
         
         
         self.view.addSubview(c)
@@ -240,7 +271,7 @@ class Draw: UIView {
         aPath.addLine(to: CGPoint(x: self.thirdPointX * rect.width, y: self.thirdPointY * rect.height))
         aPath.close()
         self.color.set()
-        self.backgroundColor = .black
+        self.backgroundColor = .clear
         aPath.fill()
     }
     
